@@ -10,8 +10,7 @@ import { ContactsPage } from '../pages/ContactsPage';
 import { RestrictedRoute } from './RestrictedRoute';
 import { PrivateRoute } from './PrivateRoute';
 import { useAuth } from 'hooks';
-
-import css from './App.module.css';
+//import css from './App.module.css';
 
 export const App = () => {
 
