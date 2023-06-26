@@ -1,0 +1,12 @@
+.navigation {
+    display: flex;
+    margin-top: 10px;
+}
+
+.navigationLink {
+    display: flex;
+}
+
+.navigationRight {
+    margin-right: 60px;
+}

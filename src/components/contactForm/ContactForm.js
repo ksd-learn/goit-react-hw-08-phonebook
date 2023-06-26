@@ -30,12 +30,12 @@ export const ContactForm = () => {
         setnumber("");
     };
 
-    const addContact = (name, phone) => {
+    const addContact = (name, number) => {
         let isExist = contacts.find((item) => item.name === name)
         if (isExist) {
           return alert(`${name} is already in contacts`);
         }
-        const newUser = { name, phone };
+        const newUser = { name, number };
         dispatch(addItem(newUser));    
     };
 

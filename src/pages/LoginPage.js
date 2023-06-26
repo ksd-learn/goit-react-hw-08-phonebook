@@ -1,5 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/operations/operationsAuth';
+import css from './RegisterPage.module.css';
 
 export const LoginPage = () => {
   const dispatch = useDispatch();
@@ -7,8 +8,8 @@ export const LoginPage = () => {
   const handleSubmit = e => {
     e.preventDefault();
     const form = e.currentTarget;
-    dispatch(
-      logIn({
+    dispatch(logIn(
+      {
         email: form.elements.email.value,
         password: form.elements.password.value,
       })
@@ -18,16 +19,16 @@ export const LoginPage = () => {
 
     return (
         <>
-            <form onSubmit={handleSubmit} autoComplete="off">
-                <label >
-                  Email
+            <form className={css.addForm} onSubmit={handleSubmit} autoComplete="off">
+                <label className={css.label}>
+                  <p>Email</p>
                   <input type="email" name="email" />
                 </label>
-                <label >
-                  Password
+                <label className={css.label}>
+                  <p>Password</p>
                   <input type="password" name="password" />
                 </label>
-                <button type="submit">Log In</button>
+                <button className={css.btn} type="submit">Log In</button>
             </form>
         </>
     )

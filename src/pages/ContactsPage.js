@@ -6,7 +6,6 @@ import { ContactList } from '../components/contactList/ContactList';
 export const ContactsPage = () => {
     return (
         <div >
-            <h1>Phonebook</h1>
             <ContactForm  />
 
             <h2>Contacts</h2>
